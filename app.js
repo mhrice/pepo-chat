@@ -1,12 +1,11 @@
 require('dotenv').load();
-var cors = require('cors')
 // Node/Express
 const express = require('express');
 const http = require('http');
 const path = require('path');
 const bodyParser = require('body-parser');
 
-const router = require('./src/router');
+const router = require('./router');
 
 // Create Express webapp
 const app = express();
@@ -17,11 +16,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.use(router);
-app.use(cors());
+
 
 // Create http server and run it
 const server = http.createServer(app);
-const port = process.env.PORT || 3002;
+const port = process.env.PORT || 3003;
 server.listen(port, function() {
   console.log('Express server running on *:' + port);
 });
