@@ -25,6 +25,8 @@ const endpointId = `${appName}:${identity}:${deviceId}`;
  *         {Object.token} String token generated
  */
 function tokenGenerator(identity = 0) {
+  console.log("HI");
+  console.log(config.TWILIO_ACCOUNT_SID)
   // Create an access token which we will sign and return to the client
   const token = new AccessToken(
     config.TWILIO_ACCOUNT_SID,
