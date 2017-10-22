@@ -2,13 +2,12 @@ const Twilio = require('twilio');
 
 
 const config = require('./config');
-const nameGenerator = require('../name_generator');
+const nameGenerator = require('./name_generator');
 
 // Access Token used for Video, IP Messaging, and Sync
 const AccessToken = Twilio.jwt.AccessToken;
 const ChatGrant = AccessToken.ChatGrant;
-const VideoGrant = AccessToken.VideoGrant;
-const SyncGrant = AccessToken.SyncGrant;
+
 
 
 const appName = 'Pepo';
