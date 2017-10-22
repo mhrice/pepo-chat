@@ -20,10 +20,10 @@ app.use(router);
 app.use(cors());
 
 // Create http server and run it
-// const server = http.createServer(app);
-// const port = process.env.PORT || 3002;
-// server.listen(port, function() {
-//   console.log('Express server running on *:' + port);
-// });
+const server = http.createServer(app);
+const port = process.env.PORT || 3002;
+server.listen(port, function() {
+  console.log('Express server running on *:' + port);
+});
 
 module.exports = app;
